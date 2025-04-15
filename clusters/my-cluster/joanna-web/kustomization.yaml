@@ -1,2 +1,3 @@
 resources:
   - joanna-web.yaml
+  - joanna-web-helmrelease.yaml
