@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: kurkapsiurka/hello-joanna
+  pullPolicy: IfNotPresent
+  tag: "v2"
+
+service:
+  type: NodePort
+  port: 8080
+  targetPort: 80
+
