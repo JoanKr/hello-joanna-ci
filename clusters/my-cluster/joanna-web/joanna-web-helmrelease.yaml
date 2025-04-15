@@ -1,4 +1,4 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: joanna-web
@@ -14,9 +14,10 @@ spec:
         namespace: flux-system
   values:
     image:
-      repository: kurkapsiurka/hello-joanna
-      tag: v2
+      repository: joannalogin/hello-joanna
+      tag: v1
+      pullPolicy: IfNotPresent
     service:
-      type: NodePort
+      type: ClusterIP
       port: 8080
       targetPort: 80
